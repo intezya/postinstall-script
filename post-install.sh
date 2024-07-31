@@ -20,7 +20,7 @@ pacman -Syu --noconfirm
 
 
 echo "Installing packages..."
-pacman -S --needed --noconfirm - < $PKGS_CONFIG_FILE
+pacman -S --needed --noconfirm - < $PKGS_CONFIG_FILE  # Concatenate pkgs from file and curl
 echo "Packages installed!"
 
 
@@ -30,7 +30,14 @@ export HOMEBREW_NO_INSTALL_FROM_API=1
 echo "Homebrew installed!"
 
 
+echo "Installing Homebrew packages..."
+...
 
 
+
+echo "Installing yay"
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+echo "Installing yay packages..."
 
 
