@@ -21,6 +21,16 @@ pacman -Syu --noconfirm
 
 echo "Installing packages..."
 pacman -S --needed --noconfirm - < $PKGS_CONFIG_FILE
+echo "Packages installed!"
 
 
-echo "Done!"
+echo "Installing Homebrew..."
+export HOMEBREW_NO_INSTALL_FROM_API=1
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "Homebrew installed!"
+
+
+
+
+
+
